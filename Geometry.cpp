@@ -3,7 +3,8 @@
 
 bool Plane::Intersect(const Ray &ray, float t_min, float t_max, SurfHit &surf) const
 {
-    //находим время
+    //находим нужное время
+    ///
   surf.t = dot((point - ray.o), normal) / dot(ray.d, normal);
 
   if(surf.t > t_min && surf.t < t_max)
